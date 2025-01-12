@@ -25,7 +25,7 @@ const store = async (req, res, next) => {
     const { name, email, age } = req.body;
     const user = new User({ id: uuidv4(), name, email, age });
     await user.save();
-    res.status(201).json(user);
+    res.status(200).json(user);
   } catch (err) {
     res.status(400).json({ err: 'Bad Request', details: err.message });
   }

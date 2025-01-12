@@ -142,7 +142,7 @@ describe('User Controller - store', () => {
       await store(mockReq, mockRes);
 
       expect(User.prototype.save).toHaveBeenCalled();
-      expect(mockRes.status).toHaveBeenCalledWith(201);
+      expect(mockRes.status).toHaveBeenCalledWith(200);
       expect(mockRes.json).toHaveBeenCalledWith(savedUser);
     });
 
